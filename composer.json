@@ -1,15 +1,21 @@
 {
-    "name": "click/click-integration-laravel",
+    "name": "anvarulugov/click-integration-laravel",
     "description": "Laravel package that ports the core Click payment integration logic.",
     "keywords": [
         "click",
         "laravel",
         "payment",
-        "shop-api"
+        "shop-api",
+        "anvarulugov"
     ],
-    "homepage": "https://github.com/click-llc/click-integration-laravel",
+    "homepage": "https://github.com/anvarulugov/click-integration-laravel",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Anvar Ulugov",
+            "email": "ulugovanvar@gmail.com",
+            "role": "Developer"
+        },
         {
             "name": "CLICK LLC",
             "email": "dev@click.uz",
