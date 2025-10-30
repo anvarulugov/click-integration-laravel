@@ -74,7 +74,7 @@ class BasePayments extends BasicPaymentMethods
 
     protected function on_invoice_checking(array $data): ResponseInterface
     {
-        $url = 'invoice/status/' . $data['service_id'] . '/' . $data['invoice_id'];
+        $url = 'invoice/status/'.$data['service_id'].'/'.$data['invoice_id'];
 
         return $this->client->request('GET', $url);
     }
@@ -109,7 +109,7 @@ class BasePayments extends BasicPaymentMethods
 
     protected function on_canceling(array $data): ResponseInterface
     {
-        $url = 'payment/reversal/' . $data['service_id'] . '/' . $data['payment_id'];
+        $url = 'payment/reversal/'.$data['service_id'].'/'.$data['payment_id'];
 
         return $this->client->request('DELETE', $url);
     }
@@ -234,7 +234,7 @@ class BasePayments extends BasicPaymentMethods
 
     protected function on_card_token_deleting(array $data): ResponseInterface
     {
-        $url = 'card_token/' . $data['service_id'] . '/' . $data['card_token'];
+        $url = 'card_token/'.$data['service_id'].'/'.$data['card_token'];
 
         return $this->client->request('DELETE', $url);
     }
@@ -264,7 +264,7 @@ class BasePayments extends BasicPaymentMethods
 
     protected function on_payment_checking(array $data): ResponseInterface
     {
-        $url = 'payment/status/' . $data['service_id'] . '/' . $data['payment_id'];
+        $url = 'payment/status/'.$data['service_id'].'/'.$data['payment_id'];
 
         return $this->client->request('GET', $url);
     }
@@ -276,7 +276,7 @@ class BasePayments extends BasicPaymentMethods
 
     protected function on_checking_with_merchant_trans_id(array $data): ResponseInterface
     {
-        $url = 'payment/status_by_mti/' . $data['service_id'] . '/' . $data['merchant_trans_id'];
+        $url = 'payment/status_by_mti/'.$data['service_id'].'/'.$data['merchant_trans_id'];
 
         return $this->client->request('GET', $url);
     }
