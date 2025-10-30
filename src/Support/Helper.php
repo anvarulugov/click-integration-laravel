@@ -67,11 +67,11 @@ class Helper
         }
 
         if (preg_match('/^[0-9]{9}$/', $normalized) === 1) {
-            return '998' . $normalized;
+            return '998'.$normalized;
         }
 
         if (preg_match('/^[0-9]{8}$/', $normalized) === 1) {
-            return '9989' . $normalized;
+            return '9989'.$normalized;
         }
 
         return null;

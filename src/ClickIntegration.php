@@ -19,8 +19,7 @@ class ClickIntegration
     public function __construct(
         private readonly ConfigRepository $config,
         private readonly DatabaseManager $database
-    ) {
-    }
+    ) {}
 
     public function payments(array $overrides = []): Payments
     {

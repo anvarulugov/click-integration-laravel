@@ -16,13 +16,12 @@ class Application
     public function __construct(
         private readonly Payments $model,
         private readonly Helper $helper
-    ) {
-    }
+    ) {}
 
     /**
-     * @throws ClickException
-     *
      * @return array<string, mixed>
+     *
+     * @throws ClickException
      */
     public function run(): array
     {
@@ -30,8 +29,7 @@ class Application
     }
 
     /**
-     * @param callable():mixed $callback
-     *
+     * @param  callable():mixed  $callback
      * @return mixed
      */
     public static function session(

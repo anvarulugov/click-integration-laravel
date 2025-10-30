@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Click\Integration;
 
+use Click\Integration\Http\ClickRequest;
 use Click\Integration\Repositories\PaymentRepository;
 use Click\Integration\Services\Payments;
 use Click\Integration\Support\Configs;
 use Click\Integration\Support\Helper;
-use Click\Integration\Http\ClickRequest;
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
 use Illuminate\Database\DatabaseManager;
 use Spatie\LaravelPackageTools\Package;

@@ -46,7 +46,7 @@ class Payments extends BasePayments
         $authSignature = sprintf(
             '%s:%s:%s',
             $provider['user_id'],
-            sha1($timestamp . $provider['secret_key']),
+            sha1($timestamp.$provider['secret_key']),
             $timestamp
         );
 
@@ -61,9 +61,9 @@ class Payments extends BasePayments
     }
 
     /**
-     * @throws ClickException
-     *
      * @return array<string, mixed>
+     *
+     * @throws ClickException
      */
     public function create_invoice(?array $request = null): array
     {
@@ -107,9 +107,9 @@ class Payments extends BasePayments
     }
 
     /**
-     * @throws ClickException
-     *
      * @return array<string, mixed>
+     *
+     * @throws ClickException
      */
     public function create_card_token(?array $request = null): array
     {
@@ -153,9 +153,9 @@ class Payments extends BasePayments
     }
 
     /**
-     * @throws ClickException
-     *
      * @return array<string, mixed>
+     *
+     * @throws ClickException
      */
     public function verify_card_token(?array $request = null): array
     {
@@ -198,9 +198,9 @@ class Payments extends BasePayments
     }
 
     /**
-     * @throws ClickException
-     *
      * @return array<string, mixed>
+     *
+     * @throws ClickException
      */
     public function payment_with_card_token(?array $request = null): array
     {
@@ -244,9 +244,9 @@ class Payments extends BasePayments
     }
 
     /**
-     * @throws ClickException
-     *
      * @return array<string, mixed>
+     *
+     * @throws ClickException
      */
     public function delete_card_token(?array $request = null): array
     {
@@ -288,9 +288,9 @@ class Payments extends BasePayments
     }
 
     /**
-     * @throws ClickException
-     *
      * @return array<string, mixed>
+     *
+     * @throws ClickException
      */
     public function check_invoice(?array $request = null): array
     {
@@ -332,9 +332,9 @@ class Payments extends BasePayments
     }
 
     /**
-     * @throws ClickException
-     *
      * @return array<string, mixed>
+     *
+     * @throws ClickException
      */
     public function check_payment(?array $request = null): array
     {
@@ -361,9 +361,9 @@ class Payments extends BasePayments
     }
 
     /**
-     * @throws ClickException
-     *
      * @return array<string, mixed>
+     *
+     * @throws ClickException
      */
     public function merchant_trans_id(?array $request = null): array
     {
@@ -390,9 +390,9 @@ class Payments extends BasePayments
     }
 
     /**
-     * @throws ClickException
-     *
      * @return array<string, mixed>
+     *
+     * @throws ClickException
      */
     public function cancel(?array $request = null): array
     {
@@ -452,7 +452,7 @@ class Payments extends BasePayments
     }
 
     /**
-     * @param array<string, mixed> $request
+     * @param  array<string, mixed>  $request
      *
      * @throws ClickException
      */

@@ -17,8 +17,7 @@ class BasicPaymentsErrors
         protected PaymentRepository $model,
         protected Helper $helper,
         protected ClickRequest $request
-    ) {
-    }
+    ) {}
 
     public function setProvider(array $provider): void
     {
@@ -26,8 +25,7 @@ class BasicPaymentsErrors
     }
 
     /**
-     * @param array<string, mixed> $request
-     *
+     * @param  array<string, mixed>  $request
      * @return array<string, mixed>
      */
     protected function request_check(array $request): array
@@ -41,13 +39,13 @@ class BasicPaymentsErrors
 
         $secretKey = $this->provider['secret_key'] ?? '';
         $signString = md5(
-            $request['click_trans_id'] .
-            $request['service_id'] .
-            $secretKey .
-            $request['merchant_trans_id'] .
-            ((int) $request['action'] === 1 ? ($request['merchant_prepare_id'] ?? '') : '') .
-            $request['amount'] .
-            $request['action'] .
+            $request['click_trans_id'].
+            $request['service_id'].
+            $secretKey.
+            $request['merchant_trans_id'].
+            ((int) $request['action'] === 1 ? ($request['merchant_prepare_id'] ?? '') : '').
+            $request['amount'].
+            $request['action'].
             $request['sign_time']
         );
 
@@ -115,7 +113,7 @@ class BasicPaymentsErrors
     }
 
     /**
-     * @param array<string, mixed> $request
+     * @param  array<string, mixed>  $request
      */
     private function is_not_possible_data(array $request): bool
     {

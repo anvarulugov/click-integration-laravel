@@ -9,8 +9,7 @@ use Click\Integration\Support\PaymentStatus;
 class BasicPaymentMethods extends BasicPaymentsErrors
 {
     /**
-     * @param array<string, mixed>|null $request
-     *
+     * @param  array<string, mixed>|null  $request
      * @return array<string, mixed>
      */
     public function prepare(?array $request = null): array
@@ -40,8 +39,7 @@ class BasicPaymentMethods extends BasicPaymentsErrors
     }
 
     /**
-     * @param array<string, mixed>|null $request
-     *
+     * @param  array<string, mixed>|null  $request
      * @return array<string, mixed>
      */
     public function complete(?array $request = null): array

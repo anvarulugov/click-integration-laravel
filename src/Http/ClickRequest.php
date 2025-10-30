@@ -172,9 +172,9 @@ class ClickRequest
     }
 
     /**
-     * @throws ClickException
-     *
      * @return array<string, mixed>
+     *
+     * @throws ClickException
      */
     private function extractRequestPayload(?HttpRequest $httpRequest): array
     {
